@@ -1,0 +1,12 @@
+C:\Users\lazar\Desktop\GIT\CarShopBack\CarShop\Application\bin\Debug\netcoreapp3.1\Application.deps.json
+C:\Users\lazar\Desktop\GIT\CarShopBack\CarShop\Application\bin\Debug\netcoreapp3.1\Application.dll
+C:\Users\lazar\Desktop\GIT\CarShopBack\CarShop\Application\bin\Debug\netcoreapp3.1\Application.pdb
+C:\Users\lazar\Desktop\GIT\CarShopBack\CarShop\Application\obj\Debug\netcoreapp3.1\Application.csprojAssemblyReference.cache
+C:\Users\lazar\Desktop\GIT\CarShopBack\CarShop\Application\obj\Debug\netcoreapp3.1\Application.csproj.CoreCompileInputs.cache
+C:\Users\lazar\Desktop\GIT\CarShopBack\CarShop\Application\obj\Debug\netcoreapp3.1\Application.AssemblyInfoInputs.cache
+C:\Users\lazar\Desktop\GIT\CarShopBack\CarShop\Application\obj\Debug\netcoreapp3.1\Application.AssemblyInfo.cs
+C:\Users\lazar\Desktop\GIT\CarShopBack\CarShop\Application\obj\Debug\netcoreapp3.1\Application.dll
+C:\Users\lazar\Desktop\GIT\CarShopBack\CarShop\Application\obj\Debug\netcoreapp3.1\Application.pdb
+C:\Users\lazar\Desktop\GIT\CarShopBack\CarShop\Application\bin\Debug\netcoreapp3.1\Domain.dll
+C:\Users\lazar\Desktop\GIT\CarShopBack\CarShop\Application\bin\Debug\netcoreapp3.1\Domain.pdb
+C:\Users\lazar\Desktop\GIT\CarShopBack\CarShop\Application\obj\Debug\netcoreapp3.1\Application.csproj.CopyComplete
