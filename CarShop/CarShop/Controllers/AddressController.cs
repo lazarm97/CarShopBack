@@ -29,19 +29,24 @@ namespace CarShop.Controllers
 
         // POST: api/Address
         [HttpPost]
-        public IActionResult Post()
+        public IActionResult Post(
+            [FromBody] AddressDto dto,
+            [FromServices] ICreateAddressCommand command)
         {
-            return Ok("asd");
+            command.Execute(dto);
+            return StatusCode(StatusCodes.Status201Created);
         }
 
         // PUT: api/Address
-        [HttpPut()]
+        [HttpPut("{id}")]
         public IActionResult Put
             (
-            [FromBody] AddressCreateDto dto,
-            [FromServices] ICreateAddressCommand command
+                int id,
+                [FromServices] IEditAddressCommand command,
+                [FromBody] AddressDto dto
             )
         {
+            dto.Id = id;
             command.Execute(dto);
             return StatusCode(StatusCodes.Status201Created);
         }

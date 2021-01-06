@@ -4,8 +4,9 @@ using System.Text;
 
 namespace Application.DTO
 {
-    public class AddressDeleteDto
+    public class MobileEditDto
     {
-        public int idAddress { get; set; }
+        public int Id { get; set; }
+        public string Number { get; set; }
     }
 }

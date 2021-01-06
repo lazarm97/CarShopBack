@@ -15,6 +15,8 @@ namespace EfDataAccess.Configurations
                 .IsRequired();
             builder.HasIndex(s => s.NumberOfSeats)
                 .IsUnique();
+            builder.Property(s => s.CreatedAt)
+                .HasDefaultValueSql("GETDATE()");
         }
     }
 }

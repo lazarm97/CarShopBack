@@ -25,7 +25,7 @@ namespace Implementation.Commands.Address
 
         public string Name => "Create address";
 
-        public void Execute(AddressCreateDto request)
+        public void Execute(AddressDto request)
         {
             var user = _context.Admins.Find(request.AdminId);
 

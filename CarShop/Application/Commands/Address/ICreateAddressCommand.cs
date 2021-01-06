@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Application.Commands.Address
 {
-    public interface ICreateAddressCommand : ICommand<AddressCreateDto>
+    public interface ICreateAddressCommand : ICommand<AddressDto>
     {
     }
 }

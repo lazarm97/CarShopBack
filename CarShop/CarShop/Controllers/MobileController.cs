@@ -29,20 +29,25 @@ namespace CarShop.Controllers
 
         // POST: api/Mobile
         [HttpPost]
-        public void Post([FromBody] string value)
-        {
-        }
-
-        // PUT: api/Mobile/5
-        [HttpPut()]
-        public IActionResult Put
-            (
-            [FromBody] MobileCreateDto dto,
-            [FromServices] ICreateMobileCommand command
-            )
+        public IActionResult Post([FromBody] MobileCreateDto dto,
+            [FromServices] ICreateMobileCommand command)
         {
             command.Execute(dto);
             return StatusCode(StatusCodes.Status201Created);
+        }
+
+        // PUT: api/Mobile/5
+        [HttpPut("{id}")]
+        public IActionResult Put
+            (
+                int id,
+                [FromServices] IEditMobileCommand command,
+                [FromBody] MobileEditDto dto
+            )
+        {
+            dto.Id = id;
+            command.Execute(dto);
+            return StatusCode(StatusCodes.Status204NoContent);
         }
 
         // DELETE: api/ApiWithActions/5

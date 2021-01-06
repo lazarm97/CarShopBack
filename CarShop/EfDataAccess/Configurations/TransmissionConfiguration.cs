@@ -15,6 +15,8 @@ namespace EfDataAccess.Configurations
                 .IsRequired();
             builder.HasIndex(t => t.Type)
                 .IsUnique();
+            builder.Property(t => t.CreatedAt)
+                .HasDefaultValueSql("GETDATE()");
         }
     }
 }

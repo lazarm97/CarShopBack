@@ -150,7 +150,9 @@ namespace EfDataAccess.Migrations
                         .HasColumnType("int");
 
                     b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
 
                     b.Property<int>("Cubic")
                         .HasColumnType("int");
@@ -192,8 +194,9 @@ namespace EfDataAccess.Migrations
                     b.Property<int?>("TransmissionId")
                         .HasColumnType("int");
 
-                    b.Property<int>("Vin")
-                        .HasColumnType("int");
+                    b.Property<string>("Vin")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<int?>("YearOfManufactureId")
                         .HasColumnType("int");
@@ -264,7 +267,9 @@ namespace EfDataAccess.Migrations
                         .UseIdentityColumn();
 
                     b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
 
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
@@ -295,7 +300,9 @@ namespace EfDataAccess.Migrations
                         .UseIdentityColumn();
 
                     b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
 
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
@@ -326,7 +333,9 @@ namespace EfDataAccess.Migrations
                         .UseIdentityColumn();
 
                     b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
 
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
@@ -357,7 +366,9 @@ namespace EfDataAccess.Migrations
                         .UseIdentityColumn();
 
                     b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
 
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
@@ -388,7 +399,9 @@ namespace EfDataAccess.Migrations
                         .UseIdentityColumn();
 
                     b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
 
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
@@ -425,7 +438,9 @@ namespace EfDataAccess.Migrations
                         .HasColumnType("int");
 
                     b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
 
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
@@ -496,7 +511,9 @@ namespace EfDataAccess.Migrations
                         .HasColumnType("int");
 
                     b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
 
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
@@ -529,7 +546,9 @@ namespace EfDataAccess.Migrations
                         .UseIdentityColumn();
 
                     b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
 
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
@@ -559,7 +578,9 @@ namespace EfDataAccess.Migrations
                         .UseIdentityColumn();
 
                     b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
 
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
@@ -634,7 +655,9 @@ namespace EfDataAccess.Migrations
                         .UseIdentityColumn();
 
                     b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
 
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");

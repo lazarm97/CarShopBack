@@ -1,10 +1,12 @@
 ﻿using Application;
 using Application.Commands.Address;
 using Application.Commands.Mobile;
+using Application.Queries.Car;
 using Application.Queries.User;
 using EfDataAccess;
 using Implementation.Commands.Address;
 using Implementation.Commands.Mobile;
+using Implementation.Queries.Car;
 using Implementation.Queries.User;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Http;
@@ -30,6 +32,9 @@ namespace CarShop.Core
             services.AddTransient<IDeleteAddressCommand, EfDeleteAddressCommand>();
             services.AddTransient<IDeleteMobileCommand, EfDeleteMobileCommand>();
             services.AddTransient<ICreateMobileCommand, EfCreateMobileCommand>();
+            services.AddTransient<IEditMobileCommand, EfEditMobileCommand>();
+            services.AddTransient<IEditAddressCommand, EfEditAddressCommand>();
+            services.AddTransient<IGetCarsQuery, EfGetCars>();
             //services.AddTransient<AdminFakeApiActor>();
 
 

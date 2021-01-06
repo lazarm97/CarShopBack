@@ -10,7 +10,7 @@ namespace Domain
         public int Cubic { get; set; }
         public int PowerKw { get; set; }
         public int Price { get; set; }
-        public int Vin { get; set; }
+        public string Vin { get; set; }
         public string Note { get; set; }
         public Model Model { get; set; }
         public Category Category { get; set; }

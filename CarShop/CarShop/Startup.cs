@@ -9,6 +9,7 @@ using AutoMapper;
 using CarShop.Core;
 using EfDataAccess;
 using Implementation.Logging;
+using Implementation.Queries.Car;
 using Implementation.Queries.User;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
@@ -50,7 +51,7 @@ namespace CarShop
             //services.AddTransient<IEmailSender, SmtpEmailSender>(x => new SmtpEmailSender(appSettings.EmailFrom, appSettings.EmailPassword));
             services.AddControllers();
             services.AddAutoMapper(typeof(EfGetUser).Assembly);
-
+            services.AddAutoMapper(typeof(EfGetCars).Assembly);
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Nedelja 10", Version = "v1" });

@@ -15,6 +15,8 @@ namespace EfDataAccess.Configurations
                 .IsRequired();
             builder.HasIndex(f => f.NameOfFuel)
                 .IsUnique();
+            builder.Property(f => f.CreatedAt)
+                .HasDefaultValueSql("GETDATE()");
         }
     }
 }
