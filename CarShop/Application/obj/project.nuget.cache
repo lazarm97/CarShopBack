@@ -1,8 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "C9u6ieYG+RprQ6NqQ/efURnQTATKQkJj/jhbhzYHmamy+YAt4zcS5CT/3KRt+SfI1ypRmark/5Byi+pHIaNfaw==",
+  "dgSpecHash": "mmjEWcvjfXFQkWmXITvA+IKpb/eCq04B8l6ddUHzko/X1vOKKbR7sGmJDZlljT0pD3nHCmy1vm+jeoerP1xHTw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\lazar\\Desktop\\GIT\\CarShopBack\\CarShop\\Application\\Application.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\ThinkPad\\Desktop\\GIT\\CarShopBack\\CarShop\\Application\\Application.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ThinkPad\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.6\\microsoft.aspnetcore.cryptography.internal.5.0.6.nupkg.sha512",
+    "C:\\Users\\ThinkPad\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\5.0.6\\microsoft.aspnetcore.cryptography.keyderivation.5.0.6.nupkg.sha512",
+    "C:\\Users\\ThinkPad\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.3\\microsoft.aspnetcore.http.features.5.0.3.nupkg.sha512",
+    "C:\\Users\\ThinkPad\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512",
+    "C:\\Users\\ThinkPad\\.nuget\\packages\\system.io.pipelines\\5.0.1\\system.io.pipelines.5.0.1.nupkg.sha512"
+  ],
   "logs": []
 }

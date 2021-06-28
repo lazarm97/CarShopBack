@@ -32,14 +32,14 @@ namespace Implementation.Queries.User
 
         public UserInfo Execute(int search)
         {
-            var user = _context.Admins
-                .Include(m => m.Mobiles)
-                .Include(a => a.Addresses)
+            var user = _context.Users
+                .Include(a => a.Address)
+                .Include(a => a.Role)
                 .Where(x => x.Id == search)
                 .FirstOrDefault();
 
-            // provera za null
-
+            if (user == null)
+                throw new EntityNotFoundException(search, typeof(Domain.User));
 
             var userDto = new UserInfo
             {
@@ -47,17 +47,16 @@ namespace Implementation.Queries.User
                 Email = user.Email,
                 FirstName = user.FirstName,
                 LastName = user.LastName,
-                Mobiles = user.Mobiles.Select(x => new MobileDto
+                Username = user.Username,
+                Mobile = user.Mobile,
+                Address = new AddressDto
                 {
-                    Id = x.Id,
-                    Number = x.Number
-                }).ToList(),
-                Addresses = user.Addresses.Select(x => new AddressDto
-                {
-                    Id = x.Id,
-                    City = x.City,
-                    Street = x.Street
-                }).ToList()
+                    Id = user.Address.Id,
+                    City = user.Address.City,
+                    Street = user.Address.Street,
+                    UserId = user.Id
+                },
+                Role = user.Role.Name
             };
 
 

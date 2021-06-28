@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Application.Helpers;
 using CarShop.Core;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -13,29 +14,39 @@ namespace CarShop.Controllers
     public class TokenController : ControllerBase
     {
         private readonly JwtManager manager;
+        private readonly IHashPassword _hashPassword;
 
-        public TokenController(JwtManager manager)
+        public TokenController(JwtManager manager, IHashPassword hashPassword)
         {
             this.manager = manager;
+            _hashPassword = hashPassword;
         }
 
         // POST api/<TokenController>
         [HttpPost]
         public IActionResult Post([FromBody] LoginRequest request)
         {
-            var token = manager.MakeToken(request.Email, request.Password);
-
-            if (token == null)
+            try
             {
-                return Unauthorized();
-            }
+                var password = _hashPassword.Encrypt(request.Password);
+                var token = manager.MakeToken(request.Username, password);
 
-            return Ok(new { token });
+                if (token == null)
+                {
+                    return Unauthorized();
+                }
+
+                return Ok(new { token });
+            }catch(Exception ex)
+            {
+                return Ok(ex.Message);
+            }
+            
         }
 
         public class LoginRequest
         {
-            public string Email { get; set; }
+            public string Username { get; set; }
             public string Password { get; set; }
         }
     }

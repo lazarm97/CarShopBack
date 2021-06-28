@@ -7,7 +7,6 @@ namespace EfDataAccess
 {
     public class EfContext : DbContext
     {
-        public DbSet<Admin> Admins { get; set; }
         public DbSet<Brand> Brands { get; set; }
         public DbSet<Car> Cars { get; set; }
         public DbSet<Car_Equipment> Car_Equipments { get; set; }
@@ -23,17 +22,19 @@ namespace EfDataAccess
         public DbSet<YearOfManufacture> YearOfManufactures { get; set; }
         public DbSet<UseCaseLog> UseCaseLogs { get; set; }
         public DbSet<Address> Addresses { get; set; }
-        public DbSet<Mobile> Mobiles { get; set; }
+        public DbSet<Reservation> Reservations { get; set; }
+        public DbSet<User> Users { get; set; }
+        public DbSet<Role> Roles { get; set; }
+        public DbSet<UserUseCase> UserUseCases { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Data Source=.\sqlexpress;Initial Catalog=CarShop;Integrated Security=True");
+            optionsBuilder.UseSqlServer(@"Data Source=.\sqlexpress;Initial Catalog=carshop;Integrated Security=True");
             base.OnConfiguring(optionsBuilder);
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.ApplyConfiguration(new AdminConfiguration());
             modelBuilder.ApplyConfiguration(new BrandConfiguration());
             modelBuilder.ApplyConfiguration(new CarConfiguration());
             modelBuilder.ApplyConfiguration(new CategoryConfiguration());
@@ -47,7 +48,10 @@ namespace EfDataAccess
             modelBuilder.ApplyConfiguration(new TransmissionConfiguration());
             modelBuilder.ApplyConfiguration(new YearOfManufactureConfiguration());
             modelBuilder.ApplyConfiguration(new AddressConfiguration());
-            modelBuilder.ApplyConfiguration(new Mobileconfiguration());
+            modelBuilder.ApplyConfiguration(new ReservationConfiguration());
+            modelBuilder.ApplyConfiguration(new CarEquipmentConfiguration());
+            modelBuilder.ApplyConfiguration(new UserConfiguration());
+            modelBuilder.ApplyConfiguration(new RoleConfiguration());
         }
     }
 }

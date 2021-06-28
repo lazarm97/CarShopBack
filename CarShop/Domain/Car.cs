@@ -18,6 +18,7 @@ namespace Domain
         public Door Door { get; set; }
         public Fuel Fuel { get; set; }
         public Seat Seat { get; set; }
+        public string Description { get; set; }
         public Transmission Transmission { get; set; }
         public YearOfManufacture YearOfManufacture { get; set; }
         public ICollection<Car_Equipment> CarEquipments { get; set; }

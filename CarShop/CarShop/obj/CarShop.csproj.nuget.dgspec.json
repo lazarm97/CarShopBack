@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lazar\\Desktop\\GIT\\CarShopBack\\CarShop\\CarShop\\CarShop.csproj": {}
+    "C:\\Users\\ThinkPad\\Desktop\\GIT\\CarShopBack\\CarShop\\CarShop\\CarShop.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lazar\\Desktop\\GIT\\CarShopBack\\CarShop\\Application\\Application.csproj": {
+    "C:\\Users\\ThinkPad\\Desktop\\GIT\\CarShopBack\\CarShop\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lazar\\Desktop\\GIT\\CarShopBack\\CarShop\\Application\\Application.csproj",
+        "projectUniqueName": "C:\\Users\\ThinkPad\\Desktop\\GIT\\CarShopBack\\CarShop\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "C:\\Users\\lazar\\Desktop\\GIT\\CarShopBack\\CarShop\\Application\\Application.csproj",
-        "packagesPath": "C:\\Users\\lazar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lazar\\Desktop\\GIT\\CarShopBack\\CarShop\\Application\\obj\\",
+        "projectPath": "C:\\Users\\ThinkPad\\Desktop\\GIT\\CarShopBack\\CarShop\\Application\\Application.csproj",
+        "packagesPath": "C:\\Users\\ThinkPad\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ThinkPad\\Desktop\\GIT\\CarShopBack\\CarShop\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\lazar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ThinkPad\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,9 +26,10 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\lazar\\Desktop\\GIT\\CarShopBack\\CarShop\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\lazar\\Desktop\\GIT\\CarShopBack\\CarShop\\Domain\\Domain.csproj"
+              "C:\\Users\\ThinkPad\\Desktop\\GIT\\CarShopBack\\CarShop\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\ThinkPad\\Desktop\\GIT\\CarShopBack\\CarShop\\Domain\\Domain.csproj"
               }
             }
           }
@@ -41,6 +42,17 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.AspNetCore.Cryptography.KeyDerivation": {
+              "target": "Package",
+              "version": "[5.0.6, )"
+            },
+            "Microsoft.AspNetCore.Http.Features": {
+              "target": "Package",
+              "version": "[5.0.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -56,21 +68,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\lazar\\Desktop\\GIT\\CarShopBack\\CarShop\\CarShop\\CarShop.csproj": {
+    "C:\\Users\\ThinkPad\\Desktop\\GIT\\CarShopBack\\CarShop\\CarShop\\CarShop.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lazar\\Desktop\\GIT\\CarShopBack\\CarShop\\CarShop\\CarShop.csproj",
+        "projectUniqueName": "C:\\Users\\ThinkPad\\Desktop\\GIT\\CarShopBack\\CarShop\\CarShop\\CarShop.csproj",
         "projectName": "CarShop",
-        "projectPath": "C:\\Users\\lazar\\Desktop\\GIT\\CarShopBack\\CarShop\\CarShop\\CarShop.csproj",
-        "packagesPath": "C:\\Users\\lazar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lazar\\Desktop\\GIT\\CarShopBack\\CarShop\\CarShop\\obj\\",
+        "projectPath": "C:\\Users\\ThinkPad\\Desktop\\GIT\\CarShopBack\\CarShop\\CarShop\\CarShop.csproj",
+        "packagesPath": "C:\\Users\\ThinkPad\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ThinkPad\\Desktop\\GIT\\CarShopBack\\CarShop\\CarShop\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\lazar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ThinkPad\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -82,15 +94,16 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\lazar\\Desktop\\GIT\\CarShopBack\\CarShop\\Application\\Application.csproj": {
-                "projectPath": "C:\\Users\\lazar\\Desktop\\GIT\\CarShopBack\\CarShop\\Application\\Application.csproj"
+              "C:\\Users\\ThinkPad\\Desktop\\GIT\\CarShopBack\\CarShop\\Application\\Application.csproj": {
+                "projectPath": "C:\\Users\\ThinkPad\\Desktop\\GIT\\CarShopBack\\CarShop\\Application\\Application.csproj"
               },
-              "C:\\Users\\lazar\\Desktop\\GIT\\CarShopBack\\CarShop\\EfDataAccess\\EfDataAccess.csproj": {
-                "projectPath": "C:\\Users\\lazar\\Desktop\\GIT\\CarShopBack\\CarShop\\EfDataAccess\\EfDataAccess.csproj"
+              "C:\\Users\\ThinkPad\\Desktop\\GIT\\CarShopBack\\CarShop\\EfDataAccess\\EfDataAccess.csproj": {
+                "projectPath": "C:\\Users\\ThinkPad\\Desktop\\GIT\\CarShopBack\\CarShop\\EfDataAccess\\EfDataAccess.csproj"
               },
-              "C:\\Users\\lazar\\Desktop\\GIT\\CarShopBack\\CarShop\\Implementation\\Implementation.csproj": {
-                "projectPath": "C:\\Users\\lazar\\Desktop\\GIT\\CarShopBack\\CarShop\\Implementation\\Implementation.csproj"
+              "C:\\Users\\ThinkPad\\Desktop\\GIT\\CarShopBack\\CarShop\\Implementation\\Implementation.csproj": {
+                "projectPath": "C:\\Users\\ThinkPad\\Desktop\\GIT\\CarShopBack\\CarShop\\Implementation\\Implementation.csproj"
               }
             }
           }
@@ -103,6 +116,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "AutoMapper": {
               "target": "Package",
@@ -112,9 +126,27 @@
               "target": "Package",
               "version": "[8.1.0, )"
             },
+            "Hangfire.AspNetCore": {
+              "target": "Package",
+              "version": "[1.7.22, )"
+            },
+            "Hangfire.Core": {
+              "target": "Package",
+              "version": "[1.7.22, )"
+            },
+            "Hangfire.MemoryStorage": {
+              "target": "Package",
+              "version": "[1.7.0, )"
+            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[3.1.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.0, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
@@ -143,21 +175,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\lazar\\Desktop\\GIT\\CarShopBack\\CarShop\\Domain\\Domain.csproj": {
+    "C:\\Users\\ThinkPad\\Desktop\\GIT\\CarShopBack\\CarShop\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lazar\\Desktop\\GIT\\CarShopBack\\CarShop\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\ThinkPad\\Desktop\\GIT\\CarShopBack\\CarShop\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\lazar\\Desktop\\GIT\\CarShopBack\\CarShop\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\lazar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lazar\\Desktop\\GIT\\CarShopBack\\CarShop\\Domain\\obj\\",
+        "projectPath": "C:\\Users\\ThinkPad\\Desktop\\GIT\\CarShopBack\\CarShop\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\ThinkPad\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ThinkPad\\Desktop\\GIT\\CarShopBack\\CarShop\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\lazar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ThinkPad\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -169,6 +201,7 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -180,6 +213,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "imports": [
             "net461",
             "net462",
@@ -195,21 +229,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\lazar\\Desktop\\GIT\\CarShopBack\\CarShop\\EfDataAccess\\EfDataAccess.csproj": {
+    "C:\\Users\\ThinkPad\\Desktop\\GIT\\CarShopBack\\CarShop\\EfDataAccess\\EfDataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lazar\\Desktop\\GIT\\CarShopBack\\CarShop\\EfDataAccess\\EfDataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\ThinkPad\\Desktop\\GIT\\CarShopBack\\CarShop\\EfDataAccess\\EfDataAccess.csproj",
         "projectName": "EfDataAccess",
-        "projectPath": "C:\\Users\\lazar\\Desktop\\GIT\\CarShopBack\\CarShop\\EfDataAccess\\EfDataAccess.csproj",
-        "packagesPath": "C:\\Users\\lazar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lazar\\Desktop\\GIT\\CarShopBack\\CarShop\\EfDataAccess\\obj\\",
+        "projectPath": "C:\\Users\\ThinkPad\\Desktop\\GIT\\CarShopBack\\CarShop\\EfDataAccess\\EfDataAccess.csproj",
+        "packagesPath": "C:\\Users\\ThinkPad\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ThinkPad\\Desktop\\GIT\\CarShopBack\\CarShop\\EfDataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\lazar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ThinkPad\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -221,9 +255,10 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\lazar\\Desktop\\GIT\\CarShopBack\\CarShop\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\lazar\\Desktop\\GIT\\CarShopBack\\CarShop\\Domain\\Domain.csproj"
+              "C:\\Users\\ThinkPad\\Desktop\\GIT\\CarShopBack\\CarShop\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\ThinkPad\\Desktop\\GIT\\CarShopBack\\CarShop\\Domain\\Domain.csproj"
               }
             }
           }
@@ -236,6 +271,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "AutoMapper": {
               "target": "Package",
@@ -277,21 +313,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\lazar\\Desktop\\GIT\\CarShopBack\\CarShop\\Implementation\\Implementation.csproj": {
+    "C:\\Users\\ThinkPad\\Desktop\\GIT\\CarShopBack\\CarShop\\Implementation\\Implementation.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lazar\\Desktop\\GIT\\CarShopBack\\CarShop\\Implementation\\Implementation.csproj",
+        "projectUniqueName": "C:\\Users\\ThinkPad\\Desktop\\GIT\\CarShopBack\\CarShop\\Implementation\\Implementation.csproj",
         "projectName": "Implementation",
-        "projectPath": "C:\\Users\\lazar\\Desktop\\GIT\\CarShopBack\\CarShop\\Implementation\\Implementation.csproj",
-        "packagesPath": "C:\\Users\\lazar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lazar\\Desktop\\GIT\\CarShopBack\\CarShop\\Implementation\\obj\\",
+        "projectPath": "C:\\Users\\ThinkPad\\Desktop\\GIT\\CarShopBack\\CarShop\\Implementation\\Implementation.csproj",
+        "packagesPath": "C:\\Users\\ThinkPad\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ThinkPad\\Desktop\\GIT\\CarShopBack\\CarShop\\Implementation\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\lazar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ThinkPad\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -303,12 +339,13 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\lazar\\Desktop\\GIT\\CarShopBack\\CarShop\\Application\\Application.csproj": {
-                "projectPath": "C:\\Users\\lazar\\Desktop\\GIT\\CarShopBack\\CarShop\\Application\\Application.csproj"
+              "C:\\Users\\ThinkPad\\Desktop\\GIT\\CarShopBack\\CarShop\\Application\\Application.csproj": {
+                "projectPath": "C:\\Users\\ThinkPad\\Desktop\\GIT\\CarShopBack\\CarShop\\Application\\Application.csproj"
               },
-              "C:\\Users\\lazar\\Desktop\\GIT\\CarShopBack\\CarShop\\EfDataAccess\\EfDataAccess.csproj": {
-                "projectPath": "C:\\Users\\lazar\\Desktop\\GIT\\CarShopBack\\CarShop\\EfDataAccess\\EfDataAccess.csproj"
+              "C:\\Users\\ThinkPad\\Desktop\\GIT\\CarShopBack\\CarShop\\EfDataAccess\\EfDataAccess.csproj": {
+                "projectPath": "C:\\Users\\ThinkPad\\Desktop\\GIT\\CarShopBack\\CarShop\\EfDataAccess\\EfDataAccess.csproj"
               }
             }
           }
@@ -321,6 +358,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "AutoMapper": {
               "target": "Package",
@@ -329,6 +367,22 @@
             "FluentValidation": {
               "target": "Package",
               "version": "[9.3.0, )"
+            },
+            "Hangfire.AspNetCore": {
+              "target": "Package",
+              "version": "[1.7.22, )"
+            },
+            "Hangfire.Core": {
+              "target": "Package",
+              "version": "[1.7.22, )"
+            },
+            "Hangfire.MemoryStorage": {
+              "target": "Package",
+              "version": "[1.7.0, )"
+            },
+            "Swashbuckle.AspNetCore.SwaggerGen": {
+              "target": "Package",
+              "version": "[5.6.3, )"
             }
           },
           "imports": [
@@ -342,11 +396,14 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

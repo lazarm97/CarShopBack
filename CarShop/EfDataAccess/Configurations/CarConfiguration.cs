@@ -27,6 +27,7 @@ namespace EfDataAccess.Configurations
                 .IsRequired();
             builder.Property(c => c.CreatedAt)
                 .HasDefaultValueSql("GETDATE()");
+            
         }
     }
 }

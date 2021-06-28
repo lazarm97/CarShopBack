@@ -10,15 +10,11 @@ namespace Application.DTO
         public int Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
+        public string Username { get; set; }
         public string Email { get; set; }
-        public ICollection<AddressDto> Addresses { get; set; }
-        public ICollection<MobileDto> Mobiles { get; set; }
-    }
-
-    public class MobileDto
-    {
-        public int Id { get; set; }
-        public string Number { get; set; }
+        public AddressDto Address { get; set; }
+        public string Mobile { get; set; }
+        public string Role { get; set; }
     }
 
 }

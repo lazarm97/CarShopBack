@@ -8,7 +8,6 @@ namespace Domain
     {
         public int Id { get; set; }
         public int UseCaseId { get; set; }
-
-        public virtual Admin Admin { get; set; }
+        public virtual User User { get; set; }
     }
 }

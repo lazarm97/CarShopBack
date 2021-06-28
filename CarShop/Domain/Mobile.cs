@@ -6,7 +6,7 @@ namespace Domain
 {
     public class Mobile : BaseEntity
     {
-        public Admin Admin { get; set; }
+        public User User { get; set; }
         public string Number { get; set; }
     }
 }

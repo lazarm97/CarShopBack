@@ -10,7 +10,7 @@ namespace Implementation.Profiles
     {
         public UserInfoProfile()
         {
-            CreateMap<Domain.Admin, UserInfo>();
+            CreateMap<Domain.User, UserInfo>();
         }
     }
 }

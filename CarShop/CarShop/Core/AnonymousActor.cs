@@ -12,6 +12,6 @@ namespace CarShop.Core
 
         public string Identity => "Anonymus";
 
-        public IEnumerable<int> AllowedUseCases => new List<int> { };
+        public IEnumerable<int> AllowedUseCases => new List<int> { 9, 10, 20, 16, 32, 33 };
     }
 }

@@ -26,9 +26,6 @@ namespace EfDataAccess.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
-                    b.Property<int?>("AdminId")
-                        .HasColumnType("int");
-
                     b.Property<string>("City")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -53,56 +50,7 @@ namespace EfDataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("AdminId");
-
                     b.ToTable("Addresses");
-                });
-
-            modelBuilder.Entity("Domain.Admin", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .UseIdentityColumn();
-
-                    b.Property<DateTime>("CreatedAt")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("datetime2")
-                        .HasDefaultValueSql("GETDATE()");
-
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("FirstName")
-                        .IsRequired()
-                        .HasMaxLength(30)
-                        .HasColumnType("nvarchar(30)");
-
-                    b.Property<bool>("IsActive")
-                        .HasColumnType("bit");
-
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("LastName")
-                        .IsRequired()
-                        .HasMaxLength(30)
-                        .HasColumnType("nvarchar(30)");
-
-                    b.Property<DateTime?>("ModifiedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Password")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("Email")
-                        .IsUnique();
-
-                    b.ToTable("Admins");
                 });
 
             modelBuilder.Entity("Domain.Brand", b =>
@@ -159,6 +107,9 @@ namespace EfDataAccess.Migrations
 
                     b.Property<int>("CurrentKm")
                         .HasColumnType("int");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int?>("DoorId")
                         .HasColumnType("int");
@@ -236,7 +187,9 @@ namespace EfDataAccess.Migrations
                         .HasColumnType("int");
 
                     b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
 
                     b.Property<int?>("EquipmentId")
                         .HasColumnType("int");
@@ -465,41 +418,6 @@ namespace EfDataAccess.Migrations
                     b.ToTable("Images");
                 });
 
-            modelBuilder.Entity("Domain.Mobile", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .UseIdentityColumn();
-
-                    b.Property<int?>("AdminId")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("CreatedAt")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("datetime2")
-                        .HasDefaultValueSql("GETDATE()");
-
-                    b.Property<bool>("IsActive")
-                        .HasColumnType("bit");
-
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnType("bit");
-
-                    b.Property<DateTime?>("ModifiedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Number")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("AdminId");
-
-                    b.ToTable("Mobiles");
-                });
-
             modelBuilder.Entity("Domain.Model", b =>
                 {
                     b.Property<int>("Id")
@@ -536,6 +454,69 @@ namespace EfDataAccess.Migrations
                         .IsUnique();
 
                     b.ToTable("Models");
+                });
+
+            modelBuilder.Entity("Domain.Reservation", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<int?>("CarId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
+
+                    b.Property<DateTime>("DateTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("ModifiedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("State")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CarId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Reservations");
+                });
+
+            modelBuilder.Entity("Domain.Role", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Name")
+                        .IsUnique();
+
+                    b.ToTable("Roles");
                 });
 
             modelBuilder.Entity("Domain.Seat", b =>
@@ -627,6 +608,78 @@ namespace EfDataAccess.Migrations
                     b.ToTable("UseCaseLogs");
                 });
 
+            modelBuilder.Entity("Domain.User", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<int?>("AddressId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETDATE()");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("FirstName")
+                        .IsRequired()
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("LastName")
+                        .IsRequired()
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
+
+                    b.Property<string>("Mobile")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("ModifiedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
+
+                    b.Property<int?>("RoleId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Token")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Username")
+                        .IsRequired()
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AddressId");
+
+                    b.HasIndex("Email")
+                        .IsUnique();
+
+                    b.HasIndex("RoleId");
+
+                    b.HasIndex("Username")
+                        .IsUnique();
+
+                    b.ToTable("Users");
+                });
+
             modelBuilder.Entity("Domain.UserUseCase", b =>
                 {
                     b.Property<int>("Id")
@@ -634,17 +687,17 @@ namespace EfDataAccess.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
-                    b.Property<int?>("AdminId")
+                    b.Property<int>("UseCaseId")
                         .HasColumnType("int");
 
-                    b.Property<int>("UseCaseId")
+                    b.Property<int?>("UserId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("AdminId");
+                    b.HasIndex("UserId");
 
-                    b.ToTable("UserUseCase");
+                    b.ToTable("UserUseCases");
                 });
 
             modelBuilder.Entity("Domain.YearOfManufacture", b =>
@@ -677,15 +730,6 @@ namespace EfDataAccess.Migrations
                         .IsUnique();
 
                     b.ToTable("YearOfManufactures");
-                });
-
-            modelBuilder.Entity("Domain.Address", b =>
-                {
-                    b.HasOne("Domain.Admin", "Admin")
-                        .WithMany("Addresses")
-                        .HasForeignKey("AdminId");
-
-                    b.Navigation("Admin");
                 });
 
             modelBuilder.Entity("Domain.Car", b =>
@@ -763,15 +807,6 @@ namespace EfDataAccess.Migrations
                     b.Navigation("Car");
                 });
 
-            modelBuilder.Entity("Domain.Mobile", b =>
-                {
-                    b.HasOne("Domain.Admin", "Admin")
-                        .WithMany("Mobiles")
-                        .HasForeignKey("AdminId");
-
-                    b.Navigation("Admin");
-                });
-
             modelBuilder.Entity("Domain.Model", b =>
                 {
                     b.HasOne("Domain.Brand", "Brand")
@@ -781,22 +816,43 @@ namespace EfDataAccess.Migrations
                     b.Navigation("Brand");
                 });
 
-            modelBuilder.Entity("Domain.UserUseCase", b =>
+            modelBuilder.Entity("Domain.Reservation", b =>
                 {
-                    b.HasOne("Domain.Admin", "Admin")
-                        .WithMany("UserUseCases")
-                        .HasForeignKey("AdminId");
+                    b.HasOne("Domain.Car", "Car")
+                        .WithMany()
+                        .HasForeignKey("CarId");
 
-                    b.Navigation("Admin");
+                    b.HasOne("Domain.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId");
+
+                    b.Navigation("Car");
+
+                    b.Navigation("User");
                 });
 
-            modelBuilder.Entity("Domain.Admin", b =>
+            modelBuilder.Entity("Domain.User", b =>
                 {
-                    b.Navigation("Addresses");
+                    b.HasOne("Domain.Address", "Address")
+                        .WithMany()
+                        .HasForeignKey("AddressId");
 
-                    b.Navigation("Mobiles");
+                    b.HasOne("Domain.Role", "Role")
+                        .WithMany()
+                        .HasForeignKey("RoleId");
 
-                    b.Navigation("UserUseCases");
+                    b.Navigation("Address");
+
+                    b.Navigation("Role");
+                });
+
+            modelBuilder.Entity("Domain.UserUseCase", b =>
+                {
+                    b.HasOne("Domain.User", "User")
+                        .WithMany("UserUseCases")
+                        .HasForeignKey("UserId");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Domain.Brand", b =>
@@ -849,6 +905,11 @@ namespace EfDataAccess.Migrations
             modelBuilder.Entity("Domain.Transmission", b =>
                 {
                     b.Navigation("Cars");
+                });
+
+            modelBuilder.Entity("Domain.User", b =>
+                {
+                    b.Navigation("UserUseCases");
                 });
 
             modelBuilder.Entity("Domain.YearOfManufacture", b =>

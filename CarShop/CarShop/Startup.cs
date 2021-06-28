@@ -4,10 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Application;
+using Application.Email;
+using Application.Helpers;
 using Application.Queries.User;
 using AutoMapper;
 using CarShop.Core;
 using EfDataAccess;
+using Hangfire;
+using Implementation.Commands.Reservation;
+using Implementation.Email;
+using Implementation.Helpers;
 using Implementation.Logging;
 using Implementation.Queries.Car;
 using Implementation.Queries.User;
@@ -28,6 +34,9 @@ namespace CarShop
 {
     public class Startup
     {
+        private static INewYearService newYearService;
+        private readonly Job jobscheduler = new Job(newYearService);
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -41,20 +50,22 @@ namespace CarShop
             var appSettings = new AppSettings();
 
             Configuration.Bind(appSettings);
-
+            services.AddTransient<INewYearService, EfNewYearService>();
             services.AddUsesCases();
             services.AddTransient<EfContext>();
             services.AddHttpContextAccessor();
             services.AddApplicationActor();
+            services.AddHangfireService();
             services.AddTransient<IUseCaseLogger, DatabaseUseCaseLogger>();
             services.AddJwt(appSettings);
-            //services.AddTransient<IEmailSender, SmtpEmailSender>(x => new SmtpEmailSender(appSettings.EmailFrom, appSettings.EmailPassword));
+            services.AddTransient<IEmailSender, SmtpEmailSender>(x => new SmtpEmailSender(appSettings.EmailFrom, appSettings.EmailPassword));
+            services.AddTransient<IHashPassword, EfHashPasswordService>();
             services.AddControllers();
             services.AddAutoMapper(typeof(EfGetUser).Assembly);
             services.AddAutoMapper(typeof(EfGetCars).Assembly);
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Nedelja 10", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Car Shop", Version = "v1" });
                 c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
                 {
                     Description = @"JWT Authorization header using the Bearer scheme. \r\n\r\n 
@@ -88,7 +99,7 @@ namespace CarShop
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IBackgroundJobClient backgroundJobClient, IRecurringJobManager recurringJobManager)
         {
             if (env.IsDevelopment())
             {
@@ -120,6 +131,11 @@ namespace CarShop
             {
                 endpoints.MapControllers();
             });
+
+            app.UseHangfireDashboard();
+
+            recurringJobManager.AddOrUpdate("Check year", () => jobscheduler.JobAsync(), Cron.Daily);
         }
+
     }
 }

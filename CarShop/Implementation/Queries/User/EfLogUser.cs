@@ -4,6 +4,8 @@ using Application.Queries.User;
 using Application.Searches;
 using Domain;
 using EfDataAccess;
+using FluentValidation;
+using Implementation.Validators.User;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,10 +16,12 @@ namespace Implementation.Queries.User
     public class EfLogUser : ILogUserQuery
     {
         private readonly EfContext _context;
+        private readonly LogUserValidate _validator;
 
-        public EfLogUser(EfContext context)
+        public EfLogUser(EfContext context, LogUserValidate validator)
         {
             _context = context;
+            _validator = validator;
         }
         public int Id => 1;
 
@@ -25,8 +29,10 @@ namespace Implementation.Queries.User
 
         public UserLogginDto Execute(UserSearch search)
         {
-            var user = _context.Admins
-                .Where(u => u.Email == search.Email && u.Password == search.Password)
+            _validator.ValidateAndThrow(search);
+
+            var user = _context.Users
+                .Where(u => u.Username == search.Email && u.Password == search.Password)
                 .FirstOrDefault();
 
             if (user == null)
@@ -35,7 +41,7 @@ namespace Implementation.Queries.User
             var userDto = new UserLogginDto
             {
                 Id = user.Id,
-                Email = user.Email
+                Username = user.Username
             };
 
             return userDto;

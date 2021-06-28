@@ -5856,19 +5856,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\lazar\\.nuget\\packages\\": {}
+    "C:\\Users\\ThinkPad\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lazar\\Desktop\\GIT\\CarShopBack\\CarShop\\EfDataAccess\\EfDataAccess.csproj",
+      "projectUniqueName": "C:\\Users\\ThinkPad\\Desktop\\GIT\\CarShopBack\\CarShop\\EfDataAccess\\EfDataAccess.csproj",
       "projectName": "EfDataAccess",
-      "projectPath": "C:\\Users\\lazar\\Desktop\\GIT\\CarShopBack\\CarShop\\EfDataAccess\\EfDataAccess.csproj",
-      "packagesPath": "C:\\Users\\lazar\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lazar\\Desktop\\GIT\\CarShopBack\\CarShop\\EfDataAccess\\obj\\",
+      "projectPath": "C:\\Users\\ThinkPad\\Desktop\\GIT\\CarShopBack\\CarShop\\EfDataAccess\\EfDataAccess.csproj",
+      "packagesPath": "C:\\Users\\ThinkPad\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ThinkPad\\Desktop\\GIT\\CarShopBack\\CarShop\\EfDataAccess\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\lazar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ThinkPad\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5880,9 +5880,10 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\lazar\\Desktop\\GIT\\CarShopBack\\CarShop\\Domain\\Domain.csproj": {
-              "projectPath": "C:\\Users\\lazar\\Desktop\\GIT\\CarShopBack\\CarShop\\Domain\\Domain.csproj"
+            "C:\\Users\\ThinkPad\\Desktop\\GIT\\CarShopBack\\CarShop\\Domain\\Domain.csproj": {
+              "projectPath": "C:\\Users\\ThinkPad\\Desktop\\GIT\\CarShopBack\\CarShop\\Domain\\Domain.csproj"
             }
           }
         }
@@ -5895,6 +5896,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "AutoMapper": {
             "target": "Package",
@@ -5936,7 +5938,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

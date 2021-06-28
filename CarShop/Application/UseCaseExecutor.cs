@@ -25,7 +25,6 @@ namespace Application
             {
                 throw new UnauthorisedUseCaseException(query, actor);
             }
-
             return query.Execute(search);
         }
 
@@ -38,10 +37,7 @@ namespace Application
             {
                 throw new UnauthorisedUseCaseException(command, actor);
             }
-
             command.Execute(request);
-
         }
-
     }
 }

@@ -12,6 +12,8 @@ namespace CarShop.Core
 
         public string Identity { get; set; }
 
+        public string Role { get; set; }
+
         public IEnumerable<int> AllowedUseCases { get; set; }
     }
 }

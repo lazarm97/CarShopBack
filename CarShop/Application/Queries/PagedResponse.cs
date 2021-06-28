@@ -11,7 +11,6 @@ namespace Application.Queries
         public int ItemsPerPage { get; set; }
         public IEnumerable<T> Items { get; set; }
 
-        // TotalCount 19 10
         public int PagesCount => (int)Math.Ceiling((float)TotalCount / ItemsPerPage);
     }
 }
